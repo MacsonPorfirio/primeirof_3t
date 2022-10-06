@@ -10,4 +10,18 @@ function escreva(){
     document.write(tabuada + " x 7 = " + (tabuada*7) + "<br>");
     document.write(tabuada + " x 8 = " + (tabuada*8) + "<br>");
 document.write(tabuada + " x 9 = " + (tabuada*9) + "<br>");
-    
+}
+let lista = ["jesus", "spessato" ,"Jorge" , "doarte" , "Waldete" , "Raquel"]
+
+function mostra(){
+    document ,write(Lista,lenght + "<br>")
+    document , Write(Lista(01));
+}
+
+
+function mostratabuada(){
+    for(let i  = )
+
+
+
+}
