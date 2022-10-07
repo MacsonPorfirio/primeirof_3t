@@ -29,7 +29,21 @@ function mostraTabuada(){
         document.write("O valor do i " + i + "<br>");
     }
 }
+function total(){
+    let v = document.getElementByld("valor").value;
+    let j = document.getElementByld("juros").value;
+    let t = document.getElementByld("meses").value;
+    let r = 0;
+    for(let i =1; i <=t; i++){
+         r = v *(1+ (j/100));
+         document.write("Mes  " + " - valor; " + r "<br>");
+         v = r;
 
+
+    }
+    
+    document.write("REsultado: " + r);
+}
 
     
     
