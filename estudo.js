@@ -61,4 +61,3 @@ let r = 0;
     }
     document.write("Resultado: " + moeda(r));
 }
-
