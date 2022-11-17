@@ -29,39 +29,41 @@ function mostraTabuada(){
     }
 }
 function moeda(atual){
-	return atual.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+    return atual.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
 }
 function total(){
     let v = document.getElementById("valor").value;
     let j = document.getElementById("juros").value;
     let t = document.getElementById("meses").value;
-    if (!Number()){
-    	alert("O campo valor deve ser números");
+    if (!Number(v)){
+        alert("O campo valor deve ser números");
         document.getElementById("valor").value = "";
         document.getElementById("valor").focus();
         return
-}
+    }
     if (!Number(j)){
-    	alert("O campo valor deve ser números");
-        document.getElementById("valor").value = "";
-        document.getElementById("valor").focus();
+        alert("O campo juros deve ser números");
+        document.getElementById("juros").value = "";
+        document.getElementById("juros").focus();
         return
-}
-if (!Number(d)){
-    	alert("O campo valor deve ser números");
-        document.getElementById("valor").value = "";
-        document.getElementById("valor").focus();
+    }
+    if (!Number(t)){
+        alert("O campo meses deve ser números");
+        document.getElementById("meses").value = "";
+        document.getElementById("meses").focus();
         return
-}
-let r = 0;
-let texto = ""
+    }
+
+    let r = 0;
+    let texto = "";
     for(let i =1; i <=t; i++){
         r = v * (1 + (j/100));
-       //document.write("Mês " + i + " - valor: " + moeda(r) + <br>
+        //document.write("Mês " + i + " - valor: " + moeda(r) + "<br>");
+        texto += "Mês " + i + ": " + moeda(r) + "<br>";
         v = r;
     }
+    document.getElementById("mes").innerHTML = texto;
+    document.getElementById("total").innerHTML = moeda(r);
     //document.write("Resultado: " + moeda(r));
 }
-document.getElementById("mes").innerHTML = texto(r);
-document.getElementById("total").innerHTML = (r);
-//document.write("REsultado:" + moeda(r));
+
